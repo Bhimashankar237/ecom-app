@@ -1,28 +1,11 @@
-package com.app.ecom_application.model;
+package com.app.ecom_application.dto;
 
-import jakarta.persistence.*;
-import lombok.NoArgsConstructor;
-
-@Entity
-@Table(name="address_table")
-@NoArgsConstructor
-public class Address {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+public class AddressDto {
     private String street;
     private String city;
     private String state;
     private String country;
     private String zipCode;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getStreet() {
         return street;

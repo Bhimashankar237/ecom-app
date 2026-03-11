@@ -1,3 +1,21 @@
 spring:
   application:
     name: ecom-application
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/boot
+    username: root
+    password: root
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
+
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
